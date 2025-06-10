@@ -101,14 +101,13 @@ namespace MagicVilla_Web.Controllers
 
         public async Task<IActionResult> DeleteVilla(VillaDTO model)
         {
-            if (ModelState.IsValid)
-            {
+            
                 var response = await _villaService.DeleteAsync<APIResponse>(model.Id);
                 if (response != null && response.IsSuccess)
                 {
                     return RedirectToAction(nameof(IndexVilla));
                 }
-            }
+            
             return View(model);
         }
 
