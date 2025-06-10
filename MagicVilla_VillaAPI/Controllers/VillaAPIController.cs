@@ -88,7 +88,7 @@ namespace MagicVilla_VillaAPI.Controllers
                 }
 
                 //return Ok(villa);
-                _response.Result = _mapper.Map<List<VillaDTO>>(villa);
+                _response.Result = _mapper.Map<VillaDTO>(villa);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);
             }

@@ -76,7 +76,7 @@ namespace MagicVilla_VillaAPI.Controllers
                     return NotFound(_response);
                 }
 
-                _response.Result = _mapper.Map<List<VillaNumberDTO>>(villaNumber);
+                _response.Result = _mapper.Map<VillaNumberDTO>(villaNumber);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);
             }
